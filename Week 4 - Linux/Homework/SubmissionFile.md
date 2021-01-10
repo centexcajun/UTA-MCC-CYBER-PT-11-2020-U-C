@@ -45,20 +45,23 @@
 
 1. Add an `engineers` group to the system.
 
-    - Command to add group:
+    - Command to add group: sudo groupadd engineers
 
 2. Add users `sam`, `joe`, `amy`, and `sara` to the managed group.
 
     - Command to add users to `engineers` group (include all four users):
-
+        sudo usermod -aG engineers sam
+        sudo usermod -aG engineers joe
+        sudo usermod -aG engineers amy
+        sudo usermod -aG engineers sara
 
 3. Create a shared folder for this group at `/home/engineers`.
 
-    - Command to create the shared folder:
+    - Command to create the shared folder: sudo mkdir /home/engineers
 
 4. Change ownership on the new engineers' shared folder to the `engineers` group.
 
-    - Command to change ownership of engineer's shared folder to engineer group:
+    - Command to change ownership of engineer's shared folder to engineer group: sudo chown :engineers engineers
 
 ### Step 4: Lynis Auditing
 
